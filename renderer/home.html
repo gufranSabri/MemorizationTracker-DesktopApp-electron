@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self'"/>
+
+        <link rel="stylesheet" type="text/css" href="./css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="./css/home.css"/>
+        <link rel="stylesheet" type="text/css" href="./css/surah.css"/>
+        <link rel="stylesheet" type="text/css" href="./css/revision.css"/>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+        <title>Rafeeq</title>
+    </head>
+
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./js/renderer.js" defer></script>
+
+    <style>
+
+    </style>
+
+    <body>
+        <div id="popupDiv" style="display: none;">
+            <!-- <span id="closePopup" style="font-weight: bold; color:rgb(238, 110, 110); cursor: pointer;">X</span> -->
+            <div id="popupBg"></div>
+            <div id="popupPrompt">
+                <h1 id="popupSurahName" style="color:wheat; text-align: center;"></h1>
+                <p id="popupNoOfPages" style="width:100%;color:white; font-size: 13px;text-align: center;"></p>
+                <p id="popupNoOfAyat" style="width:100%;color:white; font-size: 13px;text-align: center;"></p>
+                <button id="popupAddToMemList">Add to Memorized List</button><br>
+                <button id="popupAddToRevList">Add to Revision List</button><br>
+                <button id="closePopup" style="background-color:rgb(255, 68, 68);">Close</button><br>
+            </div>
+        </div>
+        <div id="header">
+            <div>
+                <img src="./images/quran.png" width="25" height="18" style="position: relative; top: 2px;"/>
+                <span style="font-weight: 700; font-size: 20px;">Rafeeq</span>
+            </div>
+            <!-- <img id="logoutBtn" src="./images/logout.png" width="25" height="20" style="cursor:pointer;position: relative; top: 1px;"/> -->
+        </div>
+
+        <div id="body">
+            <div id="tabs">
+                <button id="homeBtn" class="tabButton">Home</button>
+                <button id="surahBtn" class="tabButton">Surahs</button>
+                <button id="moreBtn" class="tabButton">More</button>
+            </div>
+
+            <div id="home" class="tab" style="display:none">
+                <div class="section">
+                    <span class="groupHeading">STATS</span>
+                    <div id="statsGroup">
+                        <div class="canvas-wrap">
+                            <canvas id="canvas" width="200" height="200"></canvas>
+                            <span id="percent"></span>
+                        </div>
+                        <div id="statsDiv"></div>
+                    </div>
+                </div>
+
+                <div id="todo" class="section"></div>
+            </div>
+
+            <div id="surah" class="tab" style="padding: 0px; display: none;">
+                <div id="options">
+                    <input type="radio" id="showAll" name="surahFilter" checked>
+                    <label for="showAll">All</label><br>
+                    &nbsp;
+                    <input type="radio" id="showMem" name="surahFilter" value="CSS">
+                    <label for="showMem">Memorized</label><br>
+                </div>
+
+                <div id="surahView"></div>
+            </div>
+
+            <div id="more" class="tab" style="display: none; color:white">
+                <p style="text-align: center; font-size: 25px;">Coming soon...</p>
+            </div>
+        </div>
+    </body>
+</html>

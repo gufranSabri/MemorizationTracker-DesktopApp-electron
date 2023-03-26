@@ -1,0 +1,66 @@
+#options{
+    width: 100%;
+    padding: 10px;
+    height: 39px;
+    background-color: #555;
+    color: white;
+    display: flex;
+}
+label{
+    position: relative;
+    top: 4px;
+}
+
+#surahView{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom:20px;
+}
+
+.surahItem{
+    height: 60px;
+    width: 250px;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    border: 1px white solid;
+}
+.surahNumber{
+    width: 30px;
+    height: 30px;
+    background-color: #555;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    rotate: 45deg;
+    border-radius: 5px;
+    color:wheat;
+}
+.surahNumber *{
+    margin: auto;
+    rotate: -45deg;   
+}
+.surahNames{
+    height: 40px;
+    width: 65%;
+    position: relative;
+    left: 10px;
+    padding: 5px;
+    color: white;
+}
+.surahArb{font-size: 15px;}
+.surahEng{font-size: 11px;}
+
+.surahItem:hover .surahNumber{background-color: #008fb3;}
+.surahItem:hover .surahArb{color: #008fb3;}
+.surahItem:hover {cursor: pointer;}
+
+.numPages{
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    left: 20px;
+    color:#008fb3;
+}

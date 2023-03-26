@@ -1,0 +1,28 @@
+{
+  "name": "desktop",
+  "productName": "Rafeeq",
+  "version": "1.0.0",
+  "description": "A desktop app that helps with Quran recitation, memorization and revision.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "Gufran Sabri",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.5",
+    "@electron-forge/maker-deb": "^6.0.5",
+    "@electron-forge/maker-rpm": "^6.0.5",
+    "@electron-forge/maker-squirrel": "^6.0.5",
+    "@electron-forge/maker-zip": "^6.0.5",
+    "electron": "^23.2.0"
+  },
+  "dependencies": {
+    "@electron/rebuild": "^3.2.10",
+    "electron-squirrel-startup": "^1.0.0",
+    "jquery": "^3.6.4",
+    "toastify-js": "^1.12.0"
+  }
+}
