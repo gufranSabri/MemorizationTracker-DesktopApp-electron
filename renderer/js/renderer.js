@@ -411,7 +411,7 @@ function loadSurahs(showMemorizedOnly){
 }
 function loadTodo(){
     getUserData()
-    document.getElementById("todo").innerHTML = '<span class="groupHeading">TODO</span><br>'
+    document.getElementById("todo").innerHTML = '<span class="groupHeading">REVISION LIST</span><br>'
     if(revlist.length==0)document.getElementById("todo").innerHTML+="<p style='text-align:center'>No surahs left to revise!</p>"
 
     for (let i = 0; i < revlist.length; i++) {
