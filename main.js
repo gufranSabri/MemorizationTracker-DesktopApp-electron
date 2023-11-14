@@ -1,7 +1,7 @@
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
-const { app, BrowserWindow, Menu, ipcMain, shell } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 
 
 const isMac = process.platform === 'darwin';
@@ -11,7 +11,7 @@ const createWindow = () => {
     win = new BrowserWindow({
         width: 740,
         height: 700,
-        icon: `${__dirname}/assets/icons/Icon_256x256.png`,
+        icon: `${__dirname}\\assets\\icons\\Icon_256x256.png`,
         resizable: false,
         webPreferences: {
             nodeIntegration: true,
@@ -20,7 +20,7 @@ const createWindow = () => {
         },
     });
     win.setMenuBarVisibility(false)
-    win.loadFile('./renderer/home.html');
+    win.loadFile('.\\renderer\\home.html');
 };
 
 app.whenReady().then(() => {

@@ -330,6 +330,8 @@ function loadSurahs(showMemorizedOnly){
     for (let i = 0; i < surahData.length; i++) {
         let item = document.createElement("div")            
         item.className = "surahItem"
+        if(memList.includes(i+1))item.style.backgroundColor = "#003d4d"
+        console.log(memList)
         
         //surah number
         let surahNumber = document.createElement("div")
